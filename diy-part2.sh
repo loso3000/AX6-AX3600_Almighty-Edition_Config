@@ -23,6 +23,13 @@ git clone https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom package
 git clone https://github.com/Leo-Jo-My/luci-theme-opentomcat.git package/luci-theme-opentomcat
 git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git package/luci-theme-atmaterial
 git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-argon
+# Add minieap
+rm -rf feeds/packages/net/minieap
+svn co https://github.com/immortalwrt/packages/trunk/net/minieap packages/net/minieap feeds/packages/net/minieap
+
+# Add mentohust & luci-app-mentohust
+git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust package/luci-app-mentohust
+git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk package/MentoHUST-OpenWrt-ipk
 
 #git clone https://github.com/kiddin9/openwrt-packages.git package/openwrt-packages
 

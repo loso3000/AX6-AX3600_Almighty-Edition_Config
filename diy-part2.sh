@@ -28,6 +28,8 @@ git clone https://github.com/jerrykuku/luci-theme-argon.git package/luci-theme-a
 
 git clone https://github.com/sirpdboy/sirpdboy-package ./package/diy
 git clone https://github.com/sirpdboy/build.git ./package/build
+git clone https://github.com/loso3000/other ./package/other
+
 git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 git clone -b luci --depth 1 https://github.com/pexcn/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng
 svn export https://github.com/xiaorouji/openwrt-passwall/trunk/chinadns-ng package/new/chinadns-ng

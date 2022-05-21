@@ -24,7 +24,7 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt
   REPO_BRANCH: openwrt-18.06
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: script/mt7628an4g.lean
+  CONFIG_FILE: script/ER-MF7628Q1.config
   DIY_P1_SH: diy-part1.sh
   DIY_P2_SH: script/mt7628an4g.sh
   UPLOAD_BIN_DIR: true

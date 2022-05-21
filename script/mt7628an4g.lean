@@ -5,55 +5,29 @@ CONFIG_TARGET_ramips_mt76x8_DEVICE_alfa-network_awusfree1=y
 
 ### USB Net Drivers
 CONFIG_PACKAGE_kmod-usb-net=y
-CONFIG_PACKAGE_kmod-usb-net-asix=y
-CONFIG_PACKAGE_kmod-usb-net-asix-ax88179=y
-CONFIG_PACKAGE_kmod-usb-net-rtl8152=y
-CONFIG_PACKAGE_kmod-usb-net-cdc-eem=y
-CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
-CONFIG_PACKAGE_kmod-usb-net-cdc-mbim=y
-CONFIG_PACKAGE_kmod-usb-net-cdc-ncm=y
-CONFIG_PACKAGE_kmod-usb-net-cdc-subset=y
-CONFIG_PACKAGE_kmod-usb-net-dm9601-ether=y
-CONFIG_PACKAGE_kmod-usb-net-hso=y
-CONFIG_PACKAGE_kmod-usb-net-huawei-cdc-ncm=y
-CONFIG_PACKAGE_kmod-usb-net-ipheth=y
-CONFIG_PACKAGE_kmod-usb-net-kalmia=y
-CONFIG_PACKAGE_kmod-usb-net-kaweth=y
-CONFIG_PACKAGE_kmod-usb-net-mcs7830=y
-CONFIG_PACKAGE_kmod-usb-net-pegasus=y
-CONFIG_PACKAGE_kmod-usb-net-pl=y
-CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=y
-CONFIG_PACKAGE_kmod-usb-net-rndis=y
-CONFIG_PACKAGE_kmod-usb-net-sierrawireless=y
-CONFIG_PACKAGE_kmod-usb-net-smsc95xx=y
-CONFIG_PACKAGE_kmod-usb-net-sr9700=y
-CONFIG_PACKAGE_kmod-usb-net2280=y
 # ipv6
-CONFIG_PACKAGE_ipv6helper=y
-CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
+# CONFIG_PACKAGE_ipv6helper is not set
+# CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 # file system
-CONFIG_PACKAGE_kmod-fs-antfs=y
+# CONFIG_PACKAGE_kmod-fs-antfs is not set
+# CONFIG_PACKAGE_ntfs-3g is not set
 # CONFIG_PACKAGE_kmod-fs-ntfs is not set
 # add upnp
-CONFIG_PACKAGE_miniupnpd-igdv1=y
-CONFIG_PACKAGE_luci-app-upnp=y
+CONFIG_PACKAGE_miniupnpd-igdv1=n
+# CONFIG_PACKAGE_luci-app-upnp is not set
 CONFIG_PACKAGE_luci-app-boostupnp=n
 # CONFIG_PACKAGE_luci-app-wol is not set
-CONFIG_PACKAGE_luci-app-wolplus=y
+CONFIG_PACKAGE_luci-app-wolplus=n
+# CONFIG_PACKAGE_luci-app-ddns is not set
 # base插件
-CONFIG_PACKAGE_ddns-scripts=y
-CONFIG_PACKAGE_ddns-scripts_dnspod=y
-CONFIG_PACKAGE_ddns-scripts_aliyun=y
-CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
-CONFIG_PACKAGE_ddns-scripts-cloudflare=y
-CONFIG_PACKAGE_ddns-scripts_freedns_42_pl=y
-CONFIG_PACKAGE_ddns-scripts_godaddy.com-v1=y
-CONFIG_PACKAGE_ddns-scripts_no-ip_com=y
-CONFIG_PACKAGE_ddns-scripts_nsupdate=y
-CONFIG_PACKAGE_ddns-scripts_route53-v1=y
+# CONFIG_PACKAGE_ddns-scripts is not set
+# CONFIG_PACKAGE_ddns-scripts_dnspod=y
+# CONFIG_PACKAGE_ddns-scripts_aliyun=y
+# CONFIG_PACKAGE_ddns-scripts_cloudflare.com-v4=y
 CONFIG_PACKAGE_default-settings=y
-CONFIG_PACKAGE_automount=y
-CONFIG_PACKAGE_autocore-arm=y
+# CONFIG_PACKAGE_default-settings-chn is not set
+# CONFIG_PACKAGE_automount is not set
+# CONFIG_PACKAGE_autocore-arm is not set
 # CONFIG_PACKAGE_autosamba is not set
 CONFIG_PACKAGE_autosamba-ksmbd=n
 CONFIG_PACKAGE_autosamba-samba4=n
@@ -83,7 +57,7 @@ CONFIG_PACKAGE_luci-app-openclash=n
 # CONFIG_PACKAGE_luci-app-samba is not set
 CONFIG_PACKAGE_luci-app-samba4=n
 CONFIG_PACKAGE_luci-app-serverchan=n
-CONFIG_PACKAGE_luci-app-turboacc=y
+# CONFIG_PACKAGE_luci-app-turboacc is not set
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSFORWARDER=y
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_DNSPROXY=y
 CONFIG_PACKAGE_luci-app-turboacc_INCLUDE_OFFLOADING=y
@@ -98,7 +72,7 @@ CONFIG_PACKAGE_luci-app-ssrpro=n
 CONFIG_PACKAGE_luci-app-vssr=n
 CONFIG_PACKAGE_luci-app-wrtbwmon=n
 # CONFIG_PACKAGE_luci-app-nlbwmon is not set
-CONFIG_PACKAGE_luci-app-netspeedtest=y
+CONFIG_PACKAGE_luci-app-netspeedtest=n
 CONFIG_PACKAGE_luci-app-bypass=n
 CONFIG_PACKAGE_luci-app-dnsfilter=n
 CONFIG_PACKAGE_luci-app-dnsto=n
@@ -109,23 +83,23 @@ CONFIG_PACKAGE_luci-app-kodexplorer=n
 CONFIG_PACKAGE_luci-app-uhttpd=n
 CONFIG_PACKAGE_luci-app-n2n_v2=n
 CONFIG_PACKAGE_luci-app-adblock-plus=n
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+CONFIG_PACKAGE_luci-app-vlmcsd=n
 # 主题
-CONFIG_PACKAGE_luci-theme-argon=y
+CONFIG_PACKAGE_luci-theme-argon=n
 CONFIG_PACKAGE_luci-theme-atmaterial=n
 CONFIG_PACKAGE_luci-theme-ifit=n
 CONFIG_PACKAGE_luci-theme-edge=n
 CONFIG_PACKAGE_luci-theme-argon_new=n
 CONFIG_PACKAGE_luci-theme-btmod=n
 CONFIG_PACKAGE_luci-theme-opentomcat=n
-CONFIG_PACKAGE_luci-theme-opentopd=y
+CONFIG_PACKAGE_luci-theme-opentopd=n
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 CONFIG_PACKAGE_luci-theme-darkmatter=n
 CONFIG_PACKAGE_luci-theme-neobird=n
 
 CONFIG_PACKAGE_luci-app-cowbping=n
-CONFIG_PACKAGE_luci-app-beardropper=y
-CONFIG_PACKAGE_luci-app-control-parentcontrol=y
+CONFIG_PACKAGE_luci-app-beardropper=n
+CONFIG_PACKAGE_luci-app-control-parentcontrol=n
 CONFIG_PACKAGE_luci-app-v2ray-server=y
 
 # 增加其它插件
@@ -178,9 +152,9 @@ CONFIG_PACKAGE_luci-app-amule=n
 CONFIG_PACKAGE_iw=y
 CONFIG_PACKAGE_iwinfo=y
 CONFIG_PACKAGE_wpad-wolfssl=y
-CONFIG_DRIVER_11AC_SUPPORT=y
-CONFIG_DRIVER_11N_SUPPORT=y
-CONFIG_DRIVER_11W_SUPPORT=y
+#CONFIG_DRIVER_11AC_SUPPORT=y
+#CONFIG_DRIVER_11N_SUPPORT=y
+#CONFIG_DRIVER_11W_SUPPORT=y
 
 # 3G/4G Drivers & Utilities
 CONFIG_PACKAGE_comgt-ncm=y
@@ -217,8 +191,8 @@ CONFIG_PACKAGE_uqmi=y
 CONFIG_PACKAGE_usb-modeswitch=y
 
 # Mobile Network Sharing
-CONFIG_PACKAGE_libimobiledevice-utils=y
-CONFIG_PACKAGE_libplist-utils=y
-CONFIG_PACKAGE_libudev-fbsd=y
-CONFIG_PACKAGE_libusbmuxd-utils=y
-CONFIG_PACKAGE_usbmuxd=y
+# CONFIG_PACKAGE_libimobiledevice-utils=y
+# CONFIG_PACKAGE_libplist-utils=y
+# CONFIG_PACKAGE_libudev-fbsd=y
+# CONFIG_PACKAGE_libusbmuxd-utils=y
+# CONFIG_PACKAGE_usbmuxd=y

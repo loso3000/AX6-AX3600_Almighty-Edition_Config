@@ -3,8 +3,6 @@ CONFIG_TARGET_ramips=y
 CONFIG_TARGET_ramips_mt76x8=y
 CONFIG_TARGET_ramips_mt76x8_DEVICE_alfa-network_awusfree1=y
 
-### USB Net Drivers
-CONFIG_PACKAGE_kmod-usb-net=y
 # ipv6
 # CONFIG_PACKAGE_ipv6helper is not set
 # CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
@@ -149,18 +147,25 @@ CONFIG_PACKAGE_luci-app-easymesh=n
 CONFIG_PACKAGE_luci-app-amule=n
 
 # Wireless Support
-CONFIG_PACKAGE_iw=y
-CONFIG_PACKAGE_iwinfo=y
-CONFIG_PACKAGE_wpad-wolfssl=y
+#CONFIG_PACKAGE_iw=y
+#CONFIG_PACKAGE_iwinfo=y
+#CONFIG_PACKAGE_wpad-wolfssl=y
 #CONFIG_DRIVER_11AC_SUPPORT=y
 #CONFIG_DRIVER_11N_SUPPORT=y
 #CONFIG_DRIVER_11W_SUPPORT=y
 
+### 4g   e20
+CONFIG_PACKAGE_kmod-usb-net=y
+CONFIG_PACKAGE_kmod-usb2=y
+CONFIG_PACKAGE_kmod-usb-uhci=y
+CONFIG_PACKAGE_kmod-usb-ohci=y
+CONFIG_PACKAGE_kmod-usb-net-rndis=y
+
 # 3G/4G Drivers & Utilities
-CONFIG_PACKAGE_comgt-ncm=y
-CONFIG_PACKAGE_comgt=y
-CONFIG_PACKAGE_kmod-mii=y
-CONFIG_PACKAGE_kmod-usb-acm=y
+# CONFIG_PACKAGE_comgt-ncm=y
+# CONFIG_PACKAGE_comgt=y
+# CONFIG_PACKAGE_kmod-mii=y
+# CONFIG_PACKAGE_kmod-usb-acm=y
 CONFIG_PACKAGE_kmod-usb-serial=y
 CONFIG_PACKAGE_kmod-usb-serial-option=y
 CONFIG_PACKAGE_kmod-usb-serial-wwan=y
@@ -177,10 +182,6 @@ CONFIG_PACKAGE_kmod-usb-serial-wwan=y
 # CONFIG_PACKAGE_kmod-usb-serial-ti-usb=y
 # CONFIG_PACKAGE_kmod-usb-serial-visor=y
 # CONFIG_PACKAGE_ppp=y
-#usb
-# CONFIG_PACKAGE_kmod-usb2=y
-# CONFIG_PACKAGE_kmod-usb-uhci=y
-# CONFIG_PACKAGE_kmod-usb-ohci=y
 
 CONFIG_PACKAGE_luci-proto-3g=y
 CONFIG_PACKAGE_luci-proto-ncm=y

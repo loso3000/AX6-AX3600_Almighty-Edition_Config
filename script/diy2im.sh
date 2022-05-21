@@ -7,7 +7,7 @@ IPADDRESS=192.168.8.1
 SSID=Sirpdboy
 ENCRYPTION=psk2
 KEY=123456
-
+config_generate="package/base-files/files/bin/config_generate"
 
 rm -rf feeds/*/*/{netdata,smartdns,wrtbwmon,adguardhome,luci-app-smartdns,luci-app-timecontrol,luci-app-smartinfo,luci-app-beardropper}
 rm -rf package/*/{autocore,autosamba,default-settings}
@@ -42,9 +42,6 @@ rm -rf ./package/build/default-settings
 rm -rf ./package/lean/default-settings  && svn co https://github.com/sirpdboy/build/trunk/default-settings ./package/lean/default-settings
 rm -rf ./package/build/autocore 
 rm -rf ./package/lean/autocore  && svn co https://github.com/sirpdboy/build/trunk/autocore ./package/lean/autocore
-sed -i 's/192.168.1.1/192.168.10.1/g' package/base-files/files/bin/config_generate
-# sed -i "s/hostname='OpenWrt'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
-sed -i "s/hostname='ImmortalWrt'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-settingsim> ./package/lean/default-settings/files/zzz-default-settings
 # curl -fsSL  https://raw.githubusercontent.com/sirpdboy/sirpdboy-package/master/set/sysctl.conf > ./package/base-files/files/etc/sysctl.conf
 
@@ -52,9 +49,12 @@ echo '添加关机'
 curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/poweroff.htm > ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_system/poweroff.htm 
 curl -fsSL  https://raw.githubusercontent.com/sirpdboy/other/master/patch/poweroff/system.lua > ./feeds/luci/modules/luci-mod-admin-full/luasrc/controller/admin/system.lua
 
-sed -i 's/option enabled.*/option enabled 0/' feeds/*/*/*/*/upnpd.config
-sed -i 's/option dports.*/option enabled 2/' feeds/*/*/*/*/upnpd.config
-sed -i "s/ImmortalWrt/OpenWrt/" {$config_generate,include/version.mk}
+sed -i 's/option enabled.*/option enabled 0/g' feeds/*/*/*/*/upnpd.config
+sed -i 's/option dports.*/option enabled 2/g' feeds/*/*/*/*/upnpd.config
+sed -i "s/ImmortalWrt/OpenWrt/g" {$config_generate,include/version.mk}
+sed -i 's/192.168.1.1/192.168.10.1/g' $config_generate
+# sed -i "s/hostname='OpenWrt'/hostname='OpenWrt'/g" $config_generate
+# sed -i "s/hostname='ImmortalWrt'/hostname='OpenWrt'/g" package/base-files/files/bin/config_generate
 sed -i "/listen_https/ {s/^/#/g}" package/*/*/*/files/uhttpd.config
 
 date1='Ipv6-Dz-R'`TZ=UTC-8 date +%Y.%m.%d -d +"12"hour`

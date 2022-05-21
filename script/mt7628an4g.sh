@@ -10,7 +10,7 @@ git clone https://github.com/sirpdboy/sirpdboy-package ./package/diy
 git clone https://github.com/loso3000/other ./package/other
 
 #add7628 er1
-cp -rf ./package/other/patch/mt7628/ramips/*  ./target/linux/ramips/*
+# cp -rf ./package/other/patch/mt7628/ramips/*  ./target/linux/ramips/*
 
 # rm -rf  ./package/build/luci-app-netspeedtest
 rm -rf  package/emortal/autocore  && svn co https://github.com/sirpdboy/build/trunk/autocore ./package/lean/autocore

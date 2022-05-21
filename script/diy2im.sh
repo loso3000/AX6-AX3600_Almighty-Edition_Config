@@ -17,6 +17,9 @@ git clone https://github.com/sirpdboy/build.git ./package/build
 git clone https://github.com/sirpdboy/sirpdboy-package ./package/diy
 git clone https://github.com/loso3000/other ./package/other
 
+sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
+sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts
+
 # rm -rf  ./package/build/luci-app-netspeedtest
 rm -rf  package/emortal/autocore  && svn co https://github.com/sirpdboy/build/trunk/autocore ./package/lean/autocore
 rm -rf  package/emortal/autosamba

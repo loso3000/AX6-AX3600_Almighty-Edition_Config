@@ -28,8 +28,8 @@ wget -qO package/base-files/files/etc/profile https://raw.githubusercontent.com/
 wget -qO package/base-files/files/etc/sysctl.conf https://raw.githubusercontent.com/sirpdboy/sirpdboy-package/master/set/sysctl.conf
 curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-4gim> ./package/emortal/default-settings/files/zzz-default-settings
 
-date1='Ipv6-Dz-R'`TZ=UTC-8 date +%Y.%m.%d -d +"12"hour`
-sed -i 's/$(VERSION_DIST_SANITIZED)-$(IMG_PREFIX_VERNUM)$(IMG_PREFIX_VERCODE)$(IMG_PREFIX_EXTRA)/Openwrt-Dz-/g' include/image.mk
+date1='Ipv6-Ez-R'`TZ=UTC-8 date +%Y.%m.%d -d +"12"hour`
+sed -i 's/$(VERSION_DIST_SANITIZED)-$(IMG_PREFIX_VERNUM)$(IMG_PREFIX_VERCODE)$(IMG_PREFIX_EXTRA)/Openwrt-Ez-/g' include/image.mk
 echo "DISTRIB_REVISION='${date1} '" > ./package/base-files/files/etc/openwrt_release1
 echo ${date1}' ' >> ./package/base-files/files/etc/banner
 echo '---------------------------------' >> ./package/base-files/files/etc/banner

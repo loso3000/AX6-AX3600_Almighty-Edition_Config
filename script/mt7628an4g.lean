@@ -98,7 +98,6 @@ CONFIG_PACKAGE_luci-theme-neobird=n
 CONFIG_PACKAGE_luci-app-cowbping=n
 CONFIG_PACKAGE_luci-app-beardropper=n
 CONFIG_PACKAGE_luci-app-control-parentcontrol=n
-CONFIG_PACKAGE_luci-app-v2ray-server=n
 
 # 增加其它插件
 CONFIG_PACKAGE_luci-app-ksmbd=n
@@ -137,7 +136,6 @@ CONFIG_PACKAGE_luci-app-mwan3helper=n
 CONFIG_PACKAGE_luci-app-qbittorrent=n
 CONFIG_PACKAGE_luci-app-familycloud=n
 CONFIG_PACKAGE_luci-app-nps=n
-CONFIG_PACKAGE_luci-app-frpc=y
 # CONFIG_PACKAGE_luci-app-nfs=n
 CONFIG_PACKAGE_luci-app-openvpn-server=n
 CONFIG_PACKAGE_luci-app-aria2=n
@@ -147,31 +145,13 @@ CONFIG_PACKAGE_luci-app-easymesh=n
 CONFIG_PACKAGE_luci-app-amule=n
 
 # Wireless Support
-# CONFIG_PACKAGE_wpa-cli is not set
-# CONFIG_PACKAGE_wpa-supplicant is not set
-# CONFIG_WPA_SUPPLICANT_NO_TIMESTAMP_CHECK is not set
-# CONFIG_WPA_RFKILL_SUPPORT is not set
 CONFIG_WPA_MSG_MIN_PRIORITY=3
-# CONFIG_DRIVER_WEXT_SUPPORT is not set
 CONFIG_DRIVER_11N_SUPPORT=y
 CONFIG_DRIVER_11AC_SUPPORT=y
 CONFIG_DRIVER_11W_SUPPORT=y
-# CONFIG_PACKAGE_wpa-supplicant-mesh is not set
-# CONFIG_PACKAGE_wpa-supplicant-mini is not set
-# CONFIG_PACKAGE_wpa-supplicant-p2p is not set
-# CONFIG_PACKAGE_wpad is not set
-# CONFIG_PACKAGE_wpad-mesh is not set
 CONFIG_PACKAGE_wpad-mini=y
 
-### 4g   e20
-CONFIG_PACKAGE_kmod-usb-net=y
-CONFIG_PACKAGE_kmod-usb2=y
-CONFIG_PACKAGE_kmod-usb-uhci=y
-CONFIG_PACKAGE_kmod-usb-ohci=y
-CONFIG_PACKAGE_kmod-usb-net-rndis=y
-
 # 3G/4G Drivers & Utilities
-### 4g   e20
 CONFIG_PACKAGE_kmod-usb-net=y
 CONFIG_PACKAGE_kmod-usb2=y
 CONFIG_PACKAGE_kmod-usb3=y
@@ -183,7 +163,7 @@ CONFIG_PACKAGE_kmod-ppp=y
 CONFIG_PACKAGE_Quectel-CM=y
 CONFIG_PACKAGE_comgt-ncm=y
 CONFIG_PACKAGE_comgt=y
-# CONFIG_PACKAGE_kmod-mii=y
+CONFIG_PACKAGE_kmod-mii=y
 CONFIG_PACKAGE_kmod-usb-acm=y
 CONFIG_PACKAGE_kmod-usb-serial=y
 CONFIG_PACKAGE_kmod-usb-serial-option=y
@@ -210,26 +190,19 @@ CONFIG_PACKAGE_umbim=y
 CONFIG_PACKAGE_uqmi=y
 CONFIG_PACKAGE_usb-modeswitch=y
 
-# Mobile Network Sharing
-# CONFIG_PACKAGE_libimobiledevice-utils=y
-# CONFIG_PACKAGE_libplist-utils=y
-# CONFIG_PACKAGE_libudev-fbsd=y
-# CONFIG_PACKAGE_libusbmuxd-utils=y
-# CONFIG_PACKAGE_usbmuxd=y
-
 CONFIG_PACKAGE_wpad-mini=y
 
 CONFIG_PACKAGE_hostapd-common=y
 CONFIG_PACKAGE_lede-keyring=y
-CONFIG_DEFAULT_wpad-mini=y
 CONFIG_BUILD_PATENTED=y
 CONFIG_TARGET_SQUASHFS_BLOCK_SIZE=256
 CONFIG_PACKAGE_libmbedtls=y
-# CONFIG_OPENSSL_WITH_COMPRESSION is not set
+# CONFIG_OPENSSL_WITH_COMPRESSION
 CONFIG_OPENSSL_WITH_NPN=y
 CONFIG_OPENSSL_WITH_SRP=y
-# CONFIG_OPENSSL_HARDWARE_SUPPORT is not set
+# CONFIG_OPENSSL_HARDWARE_SUPPORT
 
+#app
 CONFIG_PACKAGE_default-settings=y
 CONFIG_PACKAGE_luci-app-v2ray-server=y
 CONFIG_PACKAGE_luci-app-frpc=y

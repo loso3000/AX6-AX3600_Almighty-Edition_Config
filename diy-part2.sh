@@ -48,7 +48,12 @@ rm -rf ./packages/build/ddns-scripts_dnspod
 rm -rf ./package/lean/ddns-scripts_aliyun && \
 svn co https://github.com/sirpdboy/build/trunk/ddns-scripts_aliyun package/lean/ddns-scripts_aliyun
 
-# patch -p1 <../general/libgnutls.patch
+#改镜像大小8M改16M awusfree1
+sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
+sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts
+#改镜像大小8M改16M wr8305rt
+sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
+sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts
 
 # Passwall
 rm -rf ./feeds/packages/net/pdnsd-alt

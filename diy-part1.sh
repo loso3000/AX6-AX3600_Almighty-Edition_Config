@@ -22,10 +22,14 @@ sed -i "s/hostname=.*/hostname='EzOpwrt'/g" package/base-files/files/bin/config_
 # sed -i "s/hostname='OpenWrt'/hostname='OpenWrt'/g" $config_generate
 # sed -i "s/hostname='ImmortalWrt'/hostname='OpenWrt'/g"  $config_generate
 
-rm -rf  package/emortal/default-settings  && svn co https://github.com/sirpdboy/build/trunk/default-settings ./package/emortal/default-settings
+rm -rf ./package/emortal/default-settings 
+rm -rf  package/lean/default-settings 
+svn co https://github.com/sirpdboy/build/trunk/default-settings ./package/emortal/default-settings
+
 wget -qO package/base-files/files/etc/banner https://raw.githubusercontent.com/sirpdboy/build/master/banner
 wget -qO package/base-files/files/etc/profile https://raw.githubusercontent.com/sirpdboy/build/master/profile
 wget -qO package/base-files/files/etc/sysctl.conf https://raw.githubusercontent.com/sirpdboy/sirpdboy-package/master/set/sysctl.conf
+
 curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-4gim> ./package/emortal/default-settings/files/zzz-default-settings
 
 date1='Ipv6-Ez-R'`TZ=UTC-8 date +%Y.%m.%d -d +"12"hour`

@@ -9,6 +9,17 @@
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
+
+git clone https://github.com/loso3000/other ./package/other
+
+#改镜像大小8M改16M awusfree1
+sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
+sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts
+#改镜像大小8M改16M wr8305rt
+sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
+sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts
+
+
 curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-settingsim> ./package/emortal/default-settings/files/zzz-default-settings
 
 # themes添加（svn co 命令意思：指定版本如https://github）
@@ -25,10 +36,6 @@ git clone --depth=1 https://github.com/BoringCat/luci-app-mentohust package/luci
 git clone --depth=1 https://github.com/KyleRicardo/MentoHUST-OpenWrt-ipk package/MentoHUST-OpenWrt-ipk
 
 #git clone https://github.com/kiddin9/openwrt-packages.git package/openwrt-packages
-
-git clone https://github.com/sirpdboy/sirpdboy-package ./package/diy
-git clone https://github.com/sirpdboy/build.git ./package/build
-git clone https://github.com/loso3000/other ./package/other
 
 git clone https://github.com/sirpdboy/luci-app-netdata.git package/luci-app-netdata
 git clone -b luci --depth 1 https://github.com/pexcn/openwrt-chinadns-ng.git package/new/luci-app-chinadns-ng

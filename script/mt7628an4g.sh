@@ -4,9 +4,7 @@
 rm -rf feeds/*/*/{luci-app-appfilter,open-app-filter,luci-app-openclash,wrtbwmon,adguardhome,luci-app-timecontrol,luci-app-smartinfo,luci-app-syncdial}
 rm -rf feeds/*/*/{luci-app-ssr-plus,netdata,smartdns,luci-app-adguardhome,luci-app-smartdns,luci-app-beardropper,luci-app-wrtbwmon}
 
-git clone https://github.com/sirpdboy/build.git ./package/build
-git clone https://github.com/sirpdboy/sirpdboy-package ./package/diy
-git clone https://github.com/loso3000/other ./package/other
+svn export https://github.com/loso3000/other/trunk/patch/mt7628/e-ruike/quectel-CM/ package/new/quectel-CM
 
 #改镜像大小8M改16M awusfree1
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
@@ -36,7 +34,7 @@ rm -rf ./package/emortal/autocore
 rm -rf  package/lean/autocore  
 svn co https://github.com/sirpdboy/build/trunk/autocore ./package/emortal/autocore
 # curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-settingsim> ./package/emortal/default-settings/files/zzz-default-settings
-curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-4gim> ./package/lean/default-settings/files/zzz-default-settings
+curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-4g> ./package/lean/default-settings/files/zzz-default-settings
 
 
 echo '添加关机'

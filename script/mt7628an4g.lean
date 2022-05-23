@@ -204,8 +204,8 @@ CONFIG_OPENSSL_WITH_SRP=y
 
 #app
 CONFIG_PACKAGE_default-settings=y
-CONFIG_PACKAGE_luci-app-v2ray-server=y
-CONFIG_PACKAGE_luci-app-frpc=y
-CONFIG_PACKAGE_openssh-sftp-server=y  #sftp
+CONFIG_PACKAGE_luci-app-v2ray-server=n
+CONFIG_PACKAGE_luci-app-frpc=n
+# CONFIG_PACKAGE_openssh-sftp-server=y 
 CONFIG_PACKAGE_openssh-server=y
 CONFIG_PACKAGE_Quectel-CM=y

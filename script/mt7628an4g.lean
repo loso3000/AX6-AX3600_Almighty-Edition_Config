@@ -206,3 +206,5 @@ CONFIG_OPENSSL_WITH_SRP=y
 CONFIG_PACKAGE_default-settings=y
 CONFIG_PACKAGE_luci-app-v2ray-server=y
 CONFIG_PACKAGE_luci-app-frpc=y
+CONFIG_PACKAGE_openssh-sftp-server=y  #sftp
+CONFIG_PACKAGE_openssh-server=y

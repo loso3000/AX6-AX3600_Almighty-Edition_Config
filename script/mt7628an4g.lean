@@ -1,8 +1,8 @@
 CONFIG_TARGET_ramips=y
-CONFIG_TARGET_ramips_mt7628=y
-CONFIG_TARGET_ramips_mt7628_DEVICE_er-mf7628q1=y
-# CONFIG_TARGET_ramips_mt76x8=y
-# CONFIG_TARGET_ramips_mt76x8_DEVICE_alfa-network_awusfree1=y
+# CONFIG_TARGET_ramips_mt7628=y
+# CONFIG_TARGET_ramips_mt7628_DEVICE_
+CONFIG_TARGET_ramips_mt76x8=y
+CONFIG_TARGET_ramips_mt76x8_DEVICE_er-mf7628q1=y
 
 # ipv6
 # CONFIG_PACKAGE_ipv6helper is not set

@@ -31,6 +31,9 @@ wget -qO package/base-files/files/etc/profile https://raw.githubusercontent.com/
 wget -qO package/base-files/files/etc/sysctl.conf https://raw.githubusercontent.com/sirpdboy/sirpdboy-package/master/set/sysctl.conf
 
 curl -fsSL  https://raw.githubusercontent.com/loso3000/other/master/patch/default-settings/zzz-default-4gim> ./package/emortal/default-settings/files/zzz-default-settings
+# 移除 SNAPSHOT 标签
+sed -i 's,-SNAPSHOT,,g' include/version.mk
+sed -i 's,-SNAPSHOT,,g' package/base-files/image-config.in
 
 date1='Ipv6-Ez-R'`TZ=UTC-8 date +%Y.%m.%d -d +"12"hour`
 sed -i 's/$(VERSION_DIST_SANITIZED)-$(IMG_PREFIX_VERNUM)$(IMG_PREFIX_VERCODE)$(IMG_PREFIX_EXTRA)/Openwrt-Ez-/g' include/image.mk

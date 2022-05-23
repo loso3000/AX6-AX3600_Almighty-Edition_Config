@@ -10,12 +10,8 @@
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
 
-# git clone https://github.com/loso3000/other ./package/other
-svn export https://github.com/loso3000/other/trunk/patch/mt7628/e-ruike/quectel-CM/ package/new/quectel-CM
+git clone https://github.com/loso3000/other ./package/other
 
-#改镜像大小8M改16M awusfree1
-sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
-sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts
 #改镜像大小8M改16M wr8305rt
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
 sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts

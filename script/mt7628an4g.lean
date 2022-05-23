@@ -1,7 +1,8 @@
-
 CONFIG_TARGET_ramips=y
-CONFIG_TARGET_ramips_mt76x8=y
-CONFIG_TARGET_ramips_mt76x8_DEVICE_alfa-network_awusfree1=y
+CONFIG_TARGET_ramips_mt7628=y
+CONFIG_TARGET_ramips_mt7628_DEVICE_er-mf7628q1=y
+# CONFIG_TARGET_ramips_mt76x8=y
+# CONFIG_TARGET_ramips_mt76x8_DEVICE_alfa-network_awusfree1=y
 
 # ipv6
 # CONFIG_PACKAGE_ipv6helper is not set
@@ -160,7 +161,6 @@ CONFIG_PACKAGE_kmod-usb-ohci=y
 CONFIG_PACKAGE_kmod-usb-net-rndis=y
 CONFIG_PACKAGE_kmod-usb-ledtrig-usbport=y
 CONFIG_PACKAGE_kmod-ppp=y
-CONFIG_PACKAGE_Quectel-CM=y
 CONFIG_PACKAGE_comgt-ncm=y
 CONFIG_PACKAGE_comgt=y
 CONFIG_PACKAGE_kmod-mii=y
@@ -208,3 +208,4 @@ CONFIG_PACKAGE_luci-app-v2ray-server=y
 CONFIG_PACKAGE_luci-app-frpc=y
 CONFIG_PACKAGE_openssh-sftp-server=y  #sftp
 CONFIG_PACKAGE_openssh-server=y
+CONFIG_PACKAGE_Quectel-CM=y

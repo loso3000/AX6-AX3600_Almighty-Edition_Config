@@ -4,8 +4,8 @@
 git clone https://github.com/loso3000/other ./package/other
 
 #改镜像大小8M改16M wr8305rt
-sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
-sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts
+# sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
+# sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts
 
 rm -rf  package/lean/autocore  
 rm -rf  package/emortal/autocore  

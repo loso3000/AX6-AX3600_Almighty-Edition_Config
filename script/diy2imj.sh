@@ -3,13 +3,6 @@
 # Description: Build OpenWrt using GitHub Actions
 git clone https://github.com/loso3000/other ./package/other
 
-#add7628 er1
-rm -rf ./target/linux/ramips
-cp -rf ./package/other/patch/mt7628/ramips  ./target/linux/ramips
-cp -rf ./package/other/patch/mt7628/e-ruike   ./package/e-ruike
-#改镜像大小8M改16M awusfree1
-sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
-sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts
 #改镜像大小8M改16M wr8305rt
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
 sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts

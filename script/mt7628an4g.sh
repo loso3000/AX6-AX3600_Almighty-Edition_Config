@@ -5,11 +5,8 @@ rm -rf feeds/*/*/{luci-app-appfilter,open-app-filter,luci-app-openclash,wrtbwmon
 rm -rf feeds/*/*/{luci-app-ssr-plus,netdata,smartdns,luci-app-adguardhome,luci-app-smartdns,luci-app-beardropper,luci-app-wrtbwmon}
 
 svn export https://github.com/loso3000/other/trunk/patch/quectel-CM package/new/quectel-CM
-svn export https://github.com/loso3000/other/trunk/patch/er7628 package/er7628
-cp -rf package/er7628/mt76x8.mk      ./target/linux/ramips/image/mt76x8.mk
-cp -rf package/er7628/mt7628an*  ./target/linux/ramips/dts/
-cp -rf package/er7628/config-5.4 ./target/linux/ramips/mt76x8/
-cp -rf package/er7628/target.mk ./target/linux/ramips/mt76x8/
+svn export https://github.com/loso3000/other/trunk/patch/er76x8i package/er76x8i
+cp -rf package/er76x8i/*      ./target/linux/ramips/*
 
 #改镜像大小8M改16M awusfree1
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk

@@ -3,11 +3,11 @@
 
 # git clone https://github.com/loso3000/other ./package/other
 
-#add7628 er1
-rm -rf ./target/linux/ramips
 
 svn export https://github.com/loso3000/other/trunk/patch/quectel-CM package/new/quectel-CM
-svn export https://github.com/loso3000/other/trunk/patch/mt7628/ramips  ./target/linux/ramips
+svn export https://github.com/loso3000/other/trunk/patch/er76x8l package/er76x8l
+cp -rf package/er76x8l/*      ./target/linux/ramips/*
+
 # cp -rf package/er7628/mt76x8.mk      ./target/linux/ramips/image/mt76x8.mk
 # cp -rf package/er7628/ER-MF7628Q1   ./target/linux/ramips/dts/ER-MF7628Q1
 # cp -rf ./package/other/patch/mt7628/ramips  ./target/linux/ramips

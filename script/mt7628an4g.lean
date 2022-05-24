@@ -1,6 +1,4 @@
 CONFIG_TARGET_ramips=y
-# CONFIG_TARGET_ramips_mt7628=y
-# CONFIG_TARGET_ramips_mt7628_DEVICE_
 CONFIG_TARGET_ramips_mt76x8=y
 CONFIG_TARGET_ramips_mt76x8_DEVICE_er-mf7628q1=y
 
@@ -169,6 +167,11 @@ CONFIG_PACKAGE_kmod-usb-serial=y
 CONFIG_PACKAGE_kmod-usb-serial-option=y
 CONFIG_PACKAGE_kmod-usb-serial-wwan=y
 
+CONFIG_PACKAGE_kmod-usb-net-qmi-wwan=y
+CONFIG_PACKAGE_kmod-usb-net-cdc-ether=y
+CONFIG_PACKAGE_kmod-usb-net-huawei-cdc-ncm=y
+CONFIG_PACKAGE_wpad-mini=y
+
 # CONFIG_PACKAGE_kmod-usb-serial-ipw=y
 # CONFIG_PACKAGE_kmod-usb-serial-keyspan=y
 # CONFIG_PACKAGE_kmod-usb-serial-mct=y
@@ -189,8 +192,8 @@ CONFIG_PACKAGE_qmi-utils=y
 CONFIG_PACKAGE_umbim=y
 CONFIG_PACKAGE_uqmi=y
 CONFIG_PACKAGE_usb-modeswitch=y
-
-CONFIG_PACKAGE_wpad-mini=y
+CONFIG_PACKAGE_chat=y
+CONFIG_PACKAGE_comgt=y
 
 CONFIG_PACKAGE_hostapd-common=y
 CONFIG_PACKAGE_lede-keyring=y

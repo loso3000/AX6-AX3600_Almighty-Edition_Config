@@ -1,12 +1,17 @@
 #!/bin/bash
 #=================================================
 
-git clone https://github.com/loso3000/other ./package/other
+# git clone https://github.com/loso3000/other ./package/other
 
 #add7628 er1
 rm -rf ./target/linux/ramips
-cp -rf ./package/other/patch/mt7628/ramips  ./target/linux/ramips
-cp -rf ./package/other/patch/mt7628/e-ruike   ./package/e-ruike
+
+svn export https://github.com/loso3000/other/trunk/patch/quectel-CM package/new/quectel-CM
+svn export https://github.com/loso3000/other/trunk/patch/mt7628/ramips  ./target/linux/ramips
+# cp -rf package/er7628/mt76x8.mk      ./target/linux/ramips/image/mt76x8.mk
+# cp -rf package/er7628/ER-MF7628Q1   ./target/linux/ramips/dts/ER-MF7628Q1
+# cp -rf ./package/other/patch/mt7628/ramips  ./target/linux/ramips
+# cp -rf ./package/other/patch/mt7628/e-ruike   ./package/e-ruike
 #改镜像大小8M改16M awusfree1
 # sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
 # sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts

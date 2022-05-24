@@ -8,6 +8,9 @@ svn export https://github.com/loso3000/other/trunk/patch/quectel-CM package/new/
 svn export https://github.com/loso3000/other/trunk/patch/er7628 package/er7628
 cp -rf package/er7628/mt76x8.mk      ./target/linux/ramips/image/mt76x8.mk
 cp -rf package/er7628/mt7628an*  ./target/linux/ramips/dts/
+cp -rf package/er7628/config-5.4 ./target/linux/ramips/mt76x8/
+cp -rf package/er7628/target.mk ./target/linux/ramips/mt76x8/
+
 #改镜像大小8M改16M awusfree1
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt76x8.mk
 sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusfree1.dts

@@ -205,6 +205,38 @@ CONFIG_OPENSSL_WITH_NPN=y
 CONFIG_OPENSSL_WITH_SRP=y
 # CONFIG_OPENSSL_HARDWARE_SUPPORT
 
+# add kmod
+CONFIG_PACKAGE_kmod-crypto-core=y
+CONFIG_PACKAGE_kmod-crypto-hash=y
+CONFIG_PACKAGE_kmod-exfat-nofuse=y
+CONFIG_PACKAGE_kmod-fs-ext4=y
+CONFIG_PACKAGE_kmod-fuse=y
+CONFIG_PACKAGE_kmod-hw_wdg=y
+CONFIG_PACKAGE_kmod-ip6tables=y
+CONFIG_PACKAGE_kmod-ipt-conntrack=y
+CONFIG_PACKAGE_kmod-ipt-core=y
+CONFIG_PACKAGE_kmod-ipt-filter=y
+CONFIG_PACKAGE_kmod-ipt-nat=y
+CONFIG_PACKAGE_kmod-ipt-nathelper=y
+CONFIG_PACKAGE_kmod-ipt-nathelper-extra=y
+CONFIG_PACKAGE_kmod-ipv6=y
+CONFIG_PACKAGE_kmod-l2tp=y
+CONFIG_PACKAGE_kmod-lib-crc-ccitt=y
+CONFIG_PACKAGE_kmod-lib-crc16=y
+CONFIG_PACKAGE_kmod-lib-textsearch=y
+CONFIG_PACKAGE_kmod-mmc=y
+CONFIG_PACKAGE_	kmod-mt7628=y
+CONFIG_PACKAGE_kmod-mtk-mmc=y
+CONFIG_PACKAGE_kmod-nls-base=y
+CONFIG_PACKAGE_kmod-nls-cp437=y
+CONFIG_PACKAGE_kmod-nls-cp850=y
+CONFIG_PACKAGE_kmod-nls-iso8859-1=y
+CONFIG_PACKAGE_kmod-nls-utf8=y
+CONFIG_PACKAGE_kmod-ppp=y
+CONFIG_PACKAGE_kmod-pppol2tp=y
+CONFIG_PACKAGE_kmod-rdm=y
+CONFIG_PACKAGE_kmod-slhc=y
+
 #app
 CONFIG_PACKAGE_default-settings=y
 CONFIG_PACKAGE_luci-app-v2ray-server=n

@@ -1,9 +1,6 @@
 #!/bin/bash
 #=================================================
 
-rm -rf feeds/*/*/{luci-app-appfilter,open-app-filter,luci-app-openclash,wrtbwmon,adguardhome,luci-app-timecontrol,luci-app-smartinfo,luci-app-syncdial}
-rm -rf feeds/*/*/{luci-app-ssr-plus,netdata,smartdns,luci-app-adguardhome,luci-app-smartdns,luci-app-beardropper,luci-app-wrtbwmon}
-
 svn export https://github.com/loso3000/other/trunk/patch/quectel-CM package/new/quectel-CM
 svn export https://github.com/loso3000/other/trunk/patch/er76x8l package/er76x8l
 cp -rf package/er76x8l/*      ./target/linux/ramips/*
@@ -14,21 +11,6 @@ sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7628an_alfa-network_awusf
 #改镜像大小8M改16M wr8305rt
 sed -i 's/7872k/16064k/g' ./target/linux/ramips/image/mt7620.mk
 sed -i 's/7b0000/fb0000/g' ./target/linux/ramips/dts/mt7620n_zbtlink_zbt-wr8305rt.dts
-
-# rm -rf  ./package/build/luci-app-netspeedtest
-rm -rf  package/emortal/autosamba
-# rm ./package/build/pass/luci-app-ssr-plus
-rm -rf ./feeds/packages/net/smartdns
-rm -rf ./feeds/packages/net/wrtbwmon
-rm -rf ./feeds/luci/applications/luci-app-netdata
-rm -rf ./feeds/packages/admin/netdata
-rm -rf ./feeds/luci/applications/luci-app-dockerman
-rm -rf ./feeds/luci/applications/luci-app-samba4
-rm -rf ./feeds/luci/applications/luci-app-samba
-rm -rf ./feeds/luci/applications/luci-app-wol
-rm -rf ./feeds/luci/applications/luci-app-unblockneteasemusic
-rm -rf ./feeds/luci/applications/luci-app-accesscontrol
-rm -rf ./feeds/luci/applications/luci-app-beardropper
 
 rm -rf ./package/build/default-settings 
 rm -rf ./package/build/autocore 
